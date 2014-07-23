@@ -1,0 +1,25 @@
+{
+  "name": "nodehmm",
+  "version": "0.0.0",
+  "description": "node implementaion of hmm.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "hyperloglog": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liwenzhu/nodehmm.git"
+  },
+  "keywords": [
+    "hmm"
+  ],
+  "author": "Lee Wenzhu <lee.wenzhu@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liwenzhu/nodehmm/issues"
+  },
+  "homepage": "https://github.com/liwenzhu/nodehmm"
+}
