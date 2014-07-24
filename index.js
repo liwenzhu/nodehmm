@@ -6,7 +6,13 @@ function HMM () {
 
 };
 
-HMM.prototype.learn = function () {
+// supervisor train
+HMM.prototype.learn = function (fileName， matrixAFile, matrixBFile) {
+
+};
+
+// n-supervisor train
+HMM.prototype.hyperLearn = function (fileName, matrixAFile, matrixBFile) {
 
 };
 
