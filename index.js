@@ -27,7 +27,8 @@ HMM.prototype.viterbi = function (hmmModel, observations) {
 	var N = hmmModel.getStatesSize();
 	var pi = hmmModel.getStartProbability();
 	var emissionProbability = hmmModel.getEmissionProbability();
-	var row, column, time;
+	var transitionProbability = hmmModel.getTransitionProbability();
+	var row, column, prevRowColumn, time, maxVal, maxValPath, val;
 
 	/* 1. Initialization */
 	for (row = 0; row < T; row++) {
@@ -41,9 +42,28 @@ HMM.prototype.viterbi = function (hmmModel, observations) {
 		path[0][column] = -1;
 	}
 
-	return 0;
 	/* 2. Recursion */
+	for (time = 1; time < T; time++) {
+		for (column = 0; column < N; column++) {
+			maxVal = 0;
+			maxValPath = 0;
+			for (prevRowColumn = 0; prevRowColumn < N; prevRowColumn++) {
+				val = delta[time-1][prevRowColumn] * transitionProbability[prevRowColumn][column];
+				if (val > maxVal) {
+					maxVal = val;
+					maxValPath = prevRowColumn;
+				}
+			}
+			delta[time][column] = maxVal * emissionProbability[column][observations[time]];
+			path[time][column] = maxValPath;
+		}
+	}
+
 	/* 3. Termination */
+	
 	/* 4. Path (state sequence backtracking) */
+	console.log('delta:', delta);
+	console.log('path:', path);
+	return 0;
 };
 

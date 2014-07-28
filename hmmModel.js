@@ -43,6 +43,10 @@ HMMModel.prototype.setTransitionProbability = function (transitionProbability) {
 	this.transitionProbability = transitionProbability;
 };
 
+HMMModel.prototype.getTransitionProbability = function () {
+	return this.transitionProbability;
+};
+
 // emissionProbability : {
 // 	'rainy': {'walk': 0.1, 'shop': 0.4, 'clean': 0.5},
 // 	'sunny': {'walk': 0.6, 'shop': 0.3, 'clean': 0.1}
