@@ -28,6 +28,6 @@ var hmm = new HMM();
 // var observation = ['normal', 'cold', 'dizzy'];
 var observation = [NORMAL, COLD, DIZZY];
 
-// should be ['Healthy', 'Healthy', 'Fever']
+// should be [0, 0, 1] means ['Healthy', 'Healthy', 'Fever']
 console.log(hmm.viterbi(hmmModel, observation));
 

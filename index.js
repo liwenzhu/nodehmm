@@ -23,6 +23,7 @@ HMM.prototype.hyperLearn = function (fileName, matrixAFile, matrixBFile) {
 HMM.prototype.viterbi = function (hmmModel, observations) {
 	var delta = []; // value
 	var path = []; // path
+	var result = [];
 	var T = observations.length;
 	var N = hmmModel.getStatesSize();
 	var pi = hmmModel.getStartProbability();
@@ -34,6 +35,7 @@ HMM.prototype.viterbi = function (hmmModel, observations) {
 	for (row = 0; row < T; row++) {
 		path[row] = [];
 		delta[row] = [];
+		result[row] = -1;
 	}
 
 	for (column = 0; column < N; column++) {
@@ -60,10 +62,18 @@ HMM.prototype.viterbi = function (hmmModel, observations) {
 	}
 
 	/* 3. Termination */
-	
+	var probability = 0;
+	for (column = 0; column < N; column++) {
+		if (probability < delta[T-1][column]) {
+			probability = delta[T-1][column];
+			result[T-1] = column;
+		}
+	}
+
 	/* 4. Path (state sequence backtracking) */
-	console.log('delta:', delta);
-	console.log('path:', path);
-	return 0;
+	for (time = T-2; time >= 0; time--) {
+		result[time] = path[time+1][result[time+1]];
+	}
+	return result;
 };
 
