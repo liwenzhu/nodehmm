@@ -9,6 +9,9 @@
   "dependencies": {
     "hyperloglog": "*"
   },
+  "devDependencies": {
+    "uubench": "*"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/liwenzhu/nodehmm.git"

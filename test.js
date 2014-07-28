@@ -10,7 +10,6 @@ var hmm = require('./index.js'),
 	model = new hmm.Model();
 
 var states = ['Healthy', 'Fever'];
-var observation = ['normal', 'cold', 'dizzy'];
 
 model.setStatesSize(states.length);
 
@@ -37,6 +36,9 @@ console.log(result);
 result = result.map(function(r){return states[r]});
 console.log('formated:', result);
 
+result = hmm.viterbi(model, [NORMAL, DIZZY, DIZZY]);
+result = result.map(function(r){return states[r]});
+console.log('formated:', result);
 
 
 
