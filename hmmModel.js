@@ -1,8 +1,9 @@
 'use strict';
 
+module.exports = HMMModel;
+
 function HMMModel () {
 	this.states = null;
-	this.observations = null;
 	this.transitionProbability = null;
 	this.emissionProbability = null;
 };
@@ -12,10 +13,14 @@ HMMModel.prototype.setStates = function (states) {
 	this.states = states;
 };
 
+HMMModel.prototype.getStatesSize = function () {
+	return this.states.length;
+};	
+
 // observations : ['walk', 'shop', 'clean'] 
-HMMModel.prototype.setObservations = function (observations) {
-	this.observations = observations;
-};
+// HMMModel.prototype.setObservations = function (observations) {
+// 	this.observations = observations;
+// };
 
 // startProbability: {
 // 	'rainy': 0.6,
@@ -25,6 +30,11 @@ HMMModel.prototype.setStartProbability = function (startProbability) {
 	this.startProbability = startProbability;
 };
 
+HMMModel.prototype.getStartProbability = function () {
+	return this.startProbability;
+};
+
+// should change to array
 // transitionProbability : {
 //	'rainy': {'rainy': 0.7, 'sunny': 0.3},
 //	'sunny': {'rainy': 0.4, 'sunny': 0.6}
@@ -39,4 +49,8 @@ HMMModel.prototype.setTransitionProbability = function (transitionProbability) {
 // }
 HMMModel.prototype.setEmissionProbability = function (emissionProbability) {
 	this.emissionProbability = emissionProbability;
+};
+
+HMMModel.prototype.getEmissionProbability = function () {
+	return this.emissionProbability;
 };

@@ -7,7 +7,7 @@ function HMM () {
 };
 
 // supervisor train
-HMM.prototype.learn = function (fileName， matrixAFile, matrixBFile) {
+HMM.prototype.learn = function (fileName, matrixAFile, matrixBFile) {
 
 };
 
@@ -22,18 +22,26 @@ HMM.prototype.hyperLearn = function (fileName, matrixAFile, matrixBFile) {
 // observations is a token array
 HMM.prototype.viterbi = function (hmmModel, observations) {
 	var delta = []; // value
-	var psi = []; // path
+	var path = []; // path
 	var T = observations.length;
 	var N = hmmModel.getStatesSize();
 	var pi = hmmModel.getStartProbability();
-	var i, j, t;
+	var emissionProbability = hmmModel.getEmissionProbability();
+	var row, column, time;
 
 	/* 1. Initialization */
-
-	for (i = 1; i <= N; i++) {
-		delta[i] 
+	for (row = 0; row < T; row++) {
+		path[row] = [];
+		delta[row] = [];
 	}
 
+	for (column = 0; column < N; column++) {
+		// delta[1][column] = [pi[observations[0]] * emissionProbability[column][observations[0]]];
+		delta[0][column] = pi[observations[0]] * emissionProbability[column][observations[0]];
+		path[0][column] = -1;
+	}
+
+	return 0;
 	/* 2. Recursion */
 	/* 3. Termination */
 	/* 4. Path (state sequence backtracking) */
