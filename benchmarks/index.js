@@ -42,5 +42,6 @@ model.setEmissionProbability([
 ]);
 
 require('./viterbi.js');
+require('./forward.js');
 
 suite.run();

@@ -6,7 +6,7 @@ var HEALTHY = 0,
 	COLD = 1,
 	DIZZY = 2;
 
-var hmm = require('./index.js'),
+var hmm = require('../index.js'),
 	model = new hmm.Model();
 
 var states = ['Healthy', 'Fever'];
@@ -28,20 +28,8 @@ model.setEmissionProbability([
 	[0.1, 0.3, 0.6]  //FEVER : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
 ]);
 
-var result = hmm.viterbi(model, [NORMAL, COLD, DIZZY]); 
-
-// should be [0, 0, 1] means ['Healthy', 'Healthy', 'Fever']
-console.log(result);
-
-result = result.map(function(r){return states[r]});
-console.log('formated:', result);
-
-result = hmm.viterbi(model, [NORMAL, DIZZY, DIZZY]);
-result = result.map(function(r){return states[r]});
-console.log('formated:', result);
-
-
-
-
-
-
+exports.testForward = function (test) {
+	var result = hmm.forward(model);
+	test.equal(result, 0);
+	test.done();
+};
