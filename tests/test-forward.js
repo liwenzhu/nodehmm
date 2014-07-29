@@ -29,7 +29,7 @@ model.setEmissionProbability([
 ]);
 
 exports.testForward = function (test) {
-	var result = hmm.forward(model);
-	test.equal(result, 0);
+	var result = hmm.forward(model, [0, 1, 2]);
+	test.equal(result, 0.03852);
 	test.done();
 };
