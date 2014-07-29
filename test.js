@@ -25,7 +25,7 @@ model.setTransitionProbability([
 // matrix B
 model.setEmissionProbability([
 	[0.5, 0.4, 0.1], //HEALTHY : {'normal': 0.5, 'cold': 0.4, 'dizzy': 0.1},
-   	[0.1, 0.3, 0.6]  //FEVER : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
+	[0.1, 0.3, 0.6]  //FEVER : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
 ]);
 
 var result = hmm.viterbi(model, [NORMAL, COLD, DIZZY]); 
