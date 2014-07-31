@@ -32,7 +32,7 @@ model.setStartProbability([0.6, 0.4]);
 // matrix A
 model.setTransitionProbability([
     [0.7, 0.3], // healthy
-    [0.4, 0.6], // fever
+    [0.4, 0.6] // fever
 ]);
 
 // matrix B
