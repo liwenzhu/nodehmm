@@ -41,6 +41,14 @@ model.setEmissionProbability([
     [0.1, 0.3, 0.6]  //FEVER : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
 ]);
 
+alpha = [];
+beta = [];
+
+for (var i =0 ; i < states.length; i++) {
+    alpha[i] = [];
+    beta[i] = [];
+}
+
 require('./viterbi.js');
 require('./forward.js');
 require('./backward.js');

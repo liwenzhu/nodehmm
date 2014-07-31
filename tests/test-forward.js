@@ -52,8 +52,15 @@ model.setEmissionProbability([
 	[0.1, 0.3, 0.6]  //FEVER : {'normal': 0.1, 'cold': 0.3, 'dizzy': 0.6}
 ]);
 
+var alpha = [];
+
+for (var i = 0; i < states.length; i++) {
+	alpha[i] = [];
+}
+
 exports.testForward = function (test) {
-	var result = hmm.forward(model, [0, 1, 2]);
+	var result = hmm.forward(model, [0, 1, 2], alpha);
+	console.log(alpha);
 	test.equal(result, 0.03852);
 	test.done();
 };
