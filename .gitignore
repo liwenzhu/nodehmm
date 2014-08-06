@@ -1,3 +1,4 @@
 node_modules/
 all.txt
 lib/*.txt
+lib/wordId.json
