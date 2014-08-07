@@ -1,6 +1,9 @@
 nodehmm
 =======
 
+[![NPM](https://nodei.co/npm/nodehmm.png?stars&downloads)](https://nodei.co/npm/nodehmm/) [![NPM](https://nodei.co/npm-dl/nodehmm.png)](https://nodei.co/npm/nodehmm/)
+
+
 Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) algorithms.
 
 You can use an open source train corpus for Chinese in: https://github.com/liwenzhu/corpusZh
