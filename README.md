@@ -39,7 +39,7 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 	"ws": 33, 	// 非汉字字符串
 	"wu": 34 	// 其他未知的符号
 
-## Forward
+Forward
 ---
 
 Forward algorithm is to compute the probability of a sequence of given observation :
@@ -84,7 +84,7 @@ console.log(result) // -4.698248486593353
 
 ```
 
-## Backward
+##Backward
 ---
 
 ```javascript
