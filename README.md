@@ -42,8 +42,8 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 ## Forward
 
 ---
-```javascript
 
+```javascript
 var HEALTHY = 0,
 	FEVER = 1,
 	NORMAL = 0,
