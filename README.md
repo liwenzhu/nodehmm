@@ -38,7 +38,7 @@ var HEALTHY = 0,
 	COLD = 1,
 	DIZZY = 2;
 
-var hmm = require('../index.js'),
+var hmm = require('nodehmm'),
 	model = new hmm.Model();
 
 var states = ['Healthy', 'Fever'];
@@ -81,7 +81,7 @@ var HEALTHY = 0,
 	COLD = 1,
 	DIZZY = 2;
 
-var hmm = require('../index.js'),
+var hmm = require('nodehmm'),
 	model = new hmm.Model();
 
 var states = ['Healthy', 'Fever'];
@@ -125,7 +125,7 @@ var HEALTHY = 0,
 	COLD = 1,
 	DIZZY = 2;
 
-var hmm = require('../index.js'),
+var hmm = require('nodehmm'),
 	model = new hmm.Model();
 
 var states = ['Healthy', 'Fever'];
