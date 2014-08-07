@@ -5,6 +5,24 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 
 You can use an open source train corpus for Chinese in: https://github.com/liwenzhu/corpusZh
 
+Test
+---
+
+To run the unittest:
+
+```bash
+$ npm test
+```
+
+Benchmark
+---
+
+To get the benchmarks:
+
+```bash
+$ node benchmarks/index.js
+```
+
 Forward
 ---
 

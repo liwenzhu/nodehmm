@@ -1,13 +1,12 @@
 {
   "name": "nodehmm",
   "version": "0.0.1",
-  "description": "node implementaion of hmm.",
+  "description": "node implementaion of HMM(Hidden Markov model).",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/nodeunit/bin/nodeunit tests/test*"
   },
   "dependencies": {
-    "hyperloglog": "*"
   },
   "devDependencies": {
     "uubench": "*",
