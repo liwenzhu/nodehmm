@@ -42,6 +42,8 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 ## Forward
 ---
 
+Forward algorithm is to compute the probability of a sequence of given observation :
+
 ```javascript
 var HEALTHY = 0,
 	FEVER = 1,
