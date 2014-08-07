@@ -41,6 +41,7 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 
 ## Forward
 ---
+
 ```javascript
 var HEALTHY = 0,
 	FEVER = 1,
@@ -83,6 +84,7 @@ console.log(result) // -4.698248486593353
 
 ## Backward
 ---
+
 ```javascript
 var HEALTHY = 0,
 	FEVER = 1,
@@ -126,6 +128,7 @@ exports.testBackword = function (test) {
 
 ## Viterbi
 ---
+
 ```javascript
 var HEALTHY = 0,
 	FEVER = 1,
