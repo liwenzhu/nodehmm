@@ -42,8 +42,8 @@ Implementation of Forward, Backward, Viterbi, and Baum-Welch(Forward-Backward) a
 ## Forward
 
 ---
-
 ```javascript
+
 var HEALTHY = 0,
 	FEVER = 1,
 	NORMAL = 0,
@@ -78,11 +78,8 @@ for (var i = 0; i < states.length; i++) {
 	alpha[i] = [];
 }
 
-exports.testForward = function (test) {
-	var result = hmm.forward(model, [0, 1, 2], alpha);
-	test.equal(result, -4.698248486593353);
-	test.done();
-};
+var result = hmm.forward(model, [0, 1, 2], alpha);
+console.log(result) // -4.698248486593353
 
 ```
 
