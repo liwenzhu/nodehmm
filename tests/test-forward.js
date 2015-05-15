@@ -36,6 +36,6 @@ for (var i = 0; i < states.length; i++) {
 
 exports.testForward = function (test) {
 	var result = hmm.forward(model, [0, 1, 2], alpha);
-	test.equal(result, -4.698248486593353);
+	test.equal(result, -4.78468173390829);
 	test.done();
 };
