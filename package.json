@@ -1,6 +1,6 @@
 {
   "name": "nodehmm",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "node implementaion of HMM(Hidden Markov model).",
   "main": "index.js",
   "scripts": {
