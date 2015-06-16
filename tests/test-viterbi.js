@@ -30,14 +30,13 @@ model.setEmissionProbability([
 
 exports.testViterbi = function (test) {
 	var result = hmm.viterbi(model, [NORMAL, COLD, DIZZY]);
-	test.deepEqual(result, [0,0,1]);
+	test.deepEqual(result, [0, 0, 1]);
 	result = result.map(function(r){return states[r]});
 	test.deepEqual(result, ['Healthy','Healthy','Fever']);
+
+	var result = hmm.viterbi(model, [DIZZY, COLD, NORMAL]);
+	test.deepEqual(result, [1, 0, 0]);
+	result = result.map(function(r){return states[r]});
+	test.deepEqual(result, ['Fever', 'Healthy','Healthy']);
 	test.done();
 };
-
-
-
-
-
-
